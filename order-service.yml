@@ -43,3 +43,8 @@ huawei:
     customized:
       order:
         policy: 7-8 work day
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, info, env
