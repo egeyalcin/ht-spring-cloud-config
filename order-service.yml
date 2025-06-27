@@ -1,6 +1,3 @@
-server:
-  port: 8083
-
 spring:
   application:
     name: order-service
@@ -25,8 +22,8 @@ spring:
   change-log: classpath:/db/changelog/db.changelog-master.xml
   kafka:
     bootstrap-servers: localhost:9092
-  consumer:
-    group-id: huawei-market
+    consumer:
+      group-id: huawei-market
 springfox:
   documentation:
     swagger:
