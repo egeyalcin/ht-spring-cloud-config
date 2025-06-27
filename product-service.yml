@@ -1,6 +1,20 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8012/eureka}
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
 spring:
   application:
     name: product-service
+  devtools:
+    restart:
+      enabled: true
+  main:
+    allow-circular-references: true
+  messages:
+    basename: exception
   datasource:
     url: jdbc:postgresql://localhost:5432/huaweimarketdb
     username: huawei
@@ -13,10 +27,6 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQL94Dialect
-  main:
-    allow-circular-references: true
-  messages:
-    basename: exception
   liquibase:
     enabled: true
     change-log: classpath:/db/changelog/db.changelog-master.xml
@@ -24,6 +34,7 @@ spring:
     bootstrap-servers: localhost:9092
     consumer:
       group-id: huawei-market
+
 springfox:
   documentation:
     swagger:
