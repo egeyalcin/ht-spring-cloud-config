@@ -37,3 +37,9 @@ eureka:
       defaultZone: ${EUREKA_URI:http://localhost:8012/eureka}
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+huawei:
+  market:
+    customized:
+      order:
+        policy: 3-5 work day
