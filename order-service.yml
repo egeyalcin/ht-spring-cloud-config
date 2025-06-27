@@ -42,7 +42,7 @@ huawei:
   market:
     customized:
       order:
-        policy: 7-8 work day
+        policy: 4-8 work day
 management:
   endpoints:
     web:
