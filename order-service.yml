@@ -42,7 +42,7 @@ huawei:
   market:
     customized:
       order:
-        policy: cookies policy v1
+        policy: cookies policy v2
 management:
   endpoints:
     web:
