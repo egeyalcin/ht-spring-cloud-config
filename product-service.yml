@@ -41,3 +41,20 @@ springfox:
       v2:
         path: /api-docs
         use-default-response-messages: false
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      slowService:
+        register-health-indicator: true
+        sliding-window-size: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
+        permitted-number-of-calls-in-half-open-state: 3
+        minimum-number-of-calls: 2
+        automatic-transition-from-open-to-half-open-enabled: true
+
+  timelimiter:
+    instances:
+      slowService:
+        timeout-duration: 100ms
